@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-offwhite text-charcoal font-sans antialiased;
+  }
+  
+  /* Telugu & Hindi typographic rendering improvements */
+  :lang(te) {
+    font-family: 'Noto Sans Telugu', 'Inter', sans-serif;
+  }
+  :lang(hi) {
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  }
+}
+
+/* Clean, restrained scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
+
+/* Subtle focus outlines */
+*:focus-visible {
+  outline: 2px solid #14532D;
+  outline-offset: 2px;
+}
